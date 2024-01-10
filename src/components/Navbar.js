@@ -1,16 +1,23 @@
-// function Navbar(setPage) {
-//     return (
-//       <>
-//         <div className="nav">
-//             <h4 onClick={() =>setPage('home')}>HOME</h4>
+import {Link} from 'react-router-dom';
 
-//             <h4 onClick={() =>setPage('about')}>ABOUT</h4>
+function Navbar(){
+    return(
+        <>
+        <div className='nav'>
+            <Link to="/">
+                <h4>HOME</h4>
+            </Link>
 
-//             <h4 onClick={() =>setPage('items')}>ITEMS</h4>
-//         </div>
-//       </>
-//     );
-//   }
-  
-//   export default Navbar;
-  
+            <Link to="/about">
+                <h4>ABOUT</h4>
+            </Link>
+
+            <Link to="/items">
+                <h4>ITEMS</h4>
+            </Link>
+        </div>
+        </>
+    )
+}
+
+export default Navbar;
