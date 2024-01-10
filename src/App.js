@@ -2,6 +2,7 @@ import {createBrowserRouter, RouterProvider,createRoutesFromElements,Route} from
 import Home from './pages/Home';
 import About from './pages/About';
 import Items from './pages/Items';
+import Navbar from './components/Navbar';
 
 function App(){  
 
@@ -21,9 +22,17 @@ function App(){
 
   //1st way to create routers -->
   const router =createBrowserRouter([
-    {path: "/", element: <Home/>},
-    {path: "/About", element: <About/>},
-    {path: "/Items", element: <Items/>}
+    {  path: '/',
+       element: <Navbar/>,
+       children:[
+      //  {path: "/", element: <Home/>},
+        {index: true, element: <Home/>},
+       {path: "/About", element: <About/>},
+       {path: "/Items", element: <Items/>},
+
+      ],
+     },
+    
   ])
   return(
     <>
