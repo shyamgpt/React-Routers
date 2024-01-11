@@ -8,32 +8,49 @@ function App(){
 
 
   // 2nd way to creates routers-->
-  // const routes = createRoutesFromElements(
-  //   <>
-  //   <Route path="/" element={<Home/>}/>
-  //   <Route path="/About" element = {<About/>}/>
-  //   <Route path="/Items" element = {<Items/>}/>
+  const routes = createRoutesFromElements(
+    <Route path="/" element={<Navbar/>} >
+
+     {/* <Route path="/" element={<Home/>}/> */}
+     <Route index element={<Home/>}/>
+    <Route path="/About" element = {<About/>}/>
+    <Route path="/Items" element = {<Items/>}/>
+
+    </Route>
     
-  //   </>
-  // );
+  );
 
   // const router = createBrowserRouter(routes);
 
 
   //1st way to create routers -->
+  // Navigating using Absolute path-->
+  //Now the base URL is changed to '/root
   const router =createBrowserRouter([
-    {  path: '/',
-       element: <Navbar/>,
-       children:[
-      //  {path: "/", element: <Home/>},
+    {  path: '/root',element: <Navbar/>, children:[
+      //  {path: "/"(this "/"-> means is absolute path), element: <Home/>},
         {index: true, element: <Home/>},
-       {path: "/About", element: <About/>},
-       {path: "/Items", element: <Items/>},
+       {path: "/root/About", element: <About/>},
+       {path: "/root/Items", element: <Items/>},
 
       ],
      },
     
   ])
+
+
+  // const router =createBrowserRouter([
+  //   {  path: '/root',element: <Navbar/>, children:[
+  //     //  {path: "/"(this "/"-> means is absolute path), element: <Home/>},
+  //       {index: true, element: <Home/>},
+  //      {path: "/root/About", element: <About/>},
+  //      {path: "/root/Items", element: <Items/>},
+
+  //     ],
+  //    },
+    
+  // ])
+
   return(
     <>
     <RouterProvider router ={router}/>

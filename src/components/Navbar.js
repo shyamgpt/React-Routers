@@ -12,13 +12,13 @@ function Navbar(){
 
             <NavLink 
             style={({isActive})=>(isActive ? {color: 'blue'} : undefined)}
-            to="/about">
+            to="/root/about">
                 <h4>ABOUT</h4>
             </NavLink>
 
             <NavLink
             style={({isActive})=>(isActive ? {color: 'blue'} : undefined)}
-            to="/items">
+            to="/root/items">
                 <h4>ITEMS</h4>
             </NavLink>
         </div>
