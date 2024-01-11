@@ -26,19 +26,6 @@ function App(){
   //1st way to create routers -->
   // Navigating using Absolute path-->
   //Now the base URL is changed to '/root
-  const router =createBrowserRouter([
-    {  path: '/root',element: <Navbar/>, children:[
-      //  {path: "/"(this "/"-> means is absolute path), element: <Home/>},
-        {index: true, element: <Home/>},
-       {path: "/root/About", element: <About/>},
-       {path: "/root/Items", element: <Items/>},
-
-      ],
-     },
-    
-  ])
-
-
   // const router =createBrowserRouter([
   //   {  path: '/root',element: <Navbar/>, children:[
   //     //  {path: "/"(this "/"-> means is absolute path), element: <Home/>},
@@ -50,6 +37,20 @@ function App(){
   //    },
     
   // ])
+
+
+  // Navigating throught absolute path -->
+  const router =createBrowserRouter([
+    {  path: '/',element: <Navbar/>, children:[
+      //  {path: "/"(this "/"-> means is absolute path), element: <Home/>},
+        {index: true, element: <Home/>},
+       {path: "About", element: <About/>},
+       {path: "Items", element: <Items/>},
+
+      ],
+     },
+    
+  ])
 
   return(
     <>
