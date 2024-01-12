@@ -8,17 +8,17 @@ function App(){
 
 
   // 2nd way to creates routers-->
-  const routes = createRoutesFromElements(
-    <Route path="/" element={<Navbar/>} >
+  // const routes = createRoutesFromElements(
+  //   <Route path="/" element={<Navbar/>} >
 
-     {/* <Route path="/" element={<Home/>}/> */}
-     <Route index element={<Home/>}/>
-    <Route path="/About" element = {<About/>}/>
-    <Route path="/Items" element = {<Items/>}/>
+  //    {/* <Route path="/" element={<Home/>}/> */}
+  //    <Route index element={<Home/>}/>
+  //   <Route path="/About" element = {<About/>}/>
+  //   <Route path="/Items" element = {<Items/>}/>
 
-    </Route>
+  //   </Route>
     
-  );
+  // );
 
   // const router = createBrowserRouter(routes);
 
