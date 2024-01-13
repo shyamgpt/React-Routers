@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Items from './pages/Items';
 import Navbar from './components/Navbar';
+import ItemDetails from './pages/ItemDetails';
 
 function App(){  
 
@@ -39,13 +40,16 @@ function App(){
   // ])
 
 
-  // Navigating throught absolute path -->
+  // Navigating throught relative  path -->
   const router =createBrowserRouter([
     {  path: '/',element: <Navbar/>, children:[
       //  {path: "/"(this "/"-> means is absolute path), element: <Home/>},
         {index: true, element: <Home/>},
        {path: "About", element: <About/>},
        {path: "Items", element: <Items/>},
+      //  {path: 'items/item-1',element: <ItemDetails/>}
+      {path: 'items/:id',element: <ItemDetails/>}
+      // :itemId/id --> is variable name and in roting it is  known as params
 
       ],
      },
